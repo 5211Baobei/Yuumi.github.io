@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#050610" />
+    <meta name="description" content="Yuumi 的个人主页：UNSW 商业硕士金融专业，关注投资研究，也喜欢咖啡、读书、旅行、美食、运动与潜水。" />
+    <title>Yuumi · 个人主页</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="motion-backdrop" aria-hidden="true">
+      <span class="aurora-orb aurora-orb--cyan"></span>
+      <span class="aurora-orb aurora-orb--violet"></span>
+      <span class="aurora-orb aurora-orb--pink"></span>
+      <span class="motion-grid"></span>
+      <span class="light-sweep"></span>
+    </div>
+    <div class="ambient ambient--cyan" aria-hidden="true"></div>
+    <div class="ambient ambient--magenta" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true">Y</span>
+        <span class="brand-name">YUUMI</span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a class="nav-link is-active" href="#home"><span>01</span> 首页</a>
+        <a class="nav-link" href="#about"><span>02</span> 关于</a>
+        <a class="nav-link" href="#now"><span>03</span> 近况</a>
+        <a class="nav-link" href="#contact"><span>04</span> 联系</a>
+      </nav>
+      <a class="nav-index" href="#about" aria-label="向下探索">SCROLL ↓</a>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> PERSONAL SPACE / 2026</p>
+          <h1 id="hero-title"><span>你好，我是</span>Yuumi</h1>
+          <p class="hero-intro">UNSW 商业硕士 · 金融专业</p>
+          <p class="hero-subline">投资 · 读书 · 旅行 · 美食 · 咖啡 · 运动 · 潜水</p>
+          <a class="ghost-button" href="#about">
+            <span>探索我的世界</span>
+            <span class="button-arrow" aria-hidden="true">↘</span>
+          </a>
+        </div>
+
+        <div class="hero-stage reveal" aria-label="Yuumi 的数字身份卡">
+          <div class="orbital orbital--one" aria-hidden="true"></div>
+          <div class="orbital orbital--two" aria-hidden="true"></div>
+          <div class="stage-label stage-label--top" aria-hidden="true">DIGITAL IDENTITY</div>
+          <div class="stage-label stage-label--side" aria-hidden="true">PERSONAL / SPACE</div>
+
+          <article class="id-card" id="id-card">
+            <div class="card-surface">
+              <div class="card-noise" aria-hidden="true"></div>
+              <div class="card-topline">
+                <span>YUUMI / PROFILE</span>
+                <span class="signal"><i></i><i></i><i></i></span>
+              </div>
+
+              <div class="monogram-wrap" aria-hidden="true">
+                <div class="monogram-ring monogram-ring--outer"></div>
+                <div class="monogram-ring monogram-ring--inner"></div>
+                <div class="monogram"><img src="assets/avatar-yuumi.png" alt="Yuumi 卡通头像" /></div>
+                <span class="orbit-dot"></span>
+              </div>
+
+              <div class="card-identity">
+                <p class="card-kicker">HELLO, I'M</p>
+                <h2>Yuumi</h2>
+                <p>UNSW 商业硕士 · 金融专业</p>
+              </div>
+
+              <div class="card-tags" aria-label="点击查看技能与兴趣详情">
+                <button class="interest-trigger" type="button" aria-haspopup="dialog" data-index="01" data-title="投资研究" data-label="INVESTMENT RESEARCH" data-detail="9年投资经历">投资研究 <i aria-hidden="true">↗</i></button>
+                <button class="interest-trigger" type="button" aria-haspopup="dialog" data-index="02" data-title="咖啡" data-label="COFFEE" data-detail="咖啡脑袋，每天必喝">咖啡 <i aria-hidden="true">↗</i></button>
+                <button class="interest-trigger" type="button" aria-haspopup="dialog" data-index="03" data-title="读书" data-label="READING" data-detail="重视个人成长，每天读书、反思">读书 <i aria-hidden="true">↗</i></button>
+                <button class="interest-trigger" type="button" aria-haspopup="dialog" data-index="04" data-title="旅行" data-label="TRAVEL" data-detail="已去20+国家、100+城市">旅行 <i aria-hidden="true">↗</i></button>
+              </div>
+
+              <div class="card-footer">
+                <span>CURIOUS MIND</span>
+                <span class="card-code">Y–01</span>
+              </div>
+            </div>
+          </article>
+
+          <div class="floating-chip floating-chip--left" aria-hidden="true"><span>⌁</span> INVESTMENT</div>
+          <div class="floating-chip floating-chip--right" aria-hidden="true"><span>◉</span> EXPLORATION</div>
+        </div>
+
+        <div class="hero-counter" aria-hidden="true"><span>01</span><i></i><span>04</span></div>
+      </section>
+
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="section-number reveal" aria-hidden="true">02</div>
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> ABOUT ME</p>
+          <h2 id="about-title">在理性与好奇之间，<br /><em>持续探索。</em></h2>
+        </div>
+        <div class="about-layout">
+          <div class="about-visual reveal" aria-hidden="true">
+            <div class="radar">
+              <span class="radar-ring radar-ring--1"></span>
+              <span class="radar-ring radar-ring--2"></span>
+              <span class="radar-ring radar-ring--3"></span>
+              <span class="radar-line"></span>
+              <span class="radar-core">Y</span>
+              <span class="radar-node radar-node--1"></span>
+              <span class="radar-node radar-node--2"></span>
+              <span class="radar-node radar-node--3"></span>
+            </div>
+            <span class="visual-caption">CURIOSITY / IN MOTION</span>
+          </div>
+          <div class="about-copy reveal">
+            <p class="lead">就读于 UNSW 商业硕士金融专业。</p>
+            <p>爱好投资、读书、旅行、美食、咖啡、运动与潜水，在研究与体验中认识更大的世界。</p>
+            <div class="about-divider"></div>
+            <div class="about-notes">
+              <span><i>01</i> 金融</span>
+              <span><i>02</i> 探索</span>
+              <span><i>03</i> 生活</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="now section" id="now" aria-labelledby="now-title">
+        <div class="section-number reveal" aria-hidden="true">03</div>
+        <div class="now-heading reveal">
+          <div class="section-heading">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> CURRENT FOCUS</p>
+            <h2 id="now-title">最近在关注。</h2>
+            <p class="section-subtitle">有什么想法和建议吗？</p>
+          </div>
+          <p class="now-updated">UPDATED / 2026.10</p>
+        </div>
+        <div class="now-panel reveal">
+          <div class="now-grid" aria-hidden="true"></div>
+          <article class="now-row">
+            <span class="now-index">01</span>
+            <div class="now-label"><p>投资主题</p><small>INVESTMENT</small></div>
+            <div class="now-content">
+              <strong>A股 · 美股</strong>
+              <div class="now-tags"><span>科技</span><span>电力</span><span>机器人</span></div>
+            </div>
+          </article>
+          <article class="now-row">
+            <span class="now-index">02</span>
+            <div class="now-label"><p>正在阅读</p><small>READING</small></div>
+            <div class="now-content">
+              <strong class="now-books">
+                <span>《当下的力量》<small>The Power of Now</small></span>
+                <span>《穷查理宝典》<small>Poor Charlie’s Almanack</small></span>
+              </strong>
+            </div>
+          </article>
+          <article class="now-row">
+            <span class="now-index">03</span>
+            <div class="now-label"><p>下一站</p><small>NEXT DESTINATION</small></div>
+            <div class="now-content"><strong>南澳 · 斐济</strong></div>
+          </article>
+          <article class="now-row">
+            <span class="now-index">04</span>
+            <div class="now-label"><p>培养中的习惯</p><small>BUILDING</small></div>
+            <div class="now-content"><strong>力量训练</strong></div>
+          </article>
+          <div class="now-signal" aria-hidden="true"><i></i><span>NOW / IN MOTION</span></div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact" aria-labelledby="contact-title">
+        <div class="section-number reveal" aria-hidden="true">04</div>
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> GET IN TOUCH</p>
+          <h2 id="contact-title">保持联系。</h2>
+          <p class="section-subtitle">很期待与你的联络！</p>
+        </div>
+        <div class="contact-panel reveal">
+          <div class="contact-grid" aria-hidden="true"></div>
+          <div class="contact-item">
+            <div class="contact-meta"><span>01</span><p>WECHAT / 微信</p></div>
+            <strong>16755521111</strong>
+            <button class="contact-action copy-contact" type="button" data-copy="16755521111"><span>复制微信号</span><i aria-hidden="true">⌁</i></button>
+          </div>
+          <div class="contact-item">
+            <div class="contact-meta"><span>02</span><p>EMAIL / 邮箱</p></div>
+            <strong>z5608829@ad.unsw.edu.au</strong>
+            <a class="contact-action" href="mailto:z5608829@ad.unsw.edu.au"><span>发送邮件</span><i aria-hidden="true">↗</i></a>
+          </div>
+          <div class="contact-status" aria-hidden="true"><i></i><span>CONTACT CHANNEL / OPEN</span></div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="detail-dialog" id="detail-dialog" aria-labelledby="detail-title" aria-describedby="detail-copy">
+      <div class="detail-shell">
+        <div class="detail-grid" aria-hidden="true"></div>
+        <button class="detail-close" type="button" aria-label="关闭详情">×</button>
+        <div class="detail-topline">
+          <span>YUUMI / PROFILE NOTE</span>
+          <span id="detail-index">01</span>
+        </div>
+        <div class="detail-signal" aria-hidden="true">
+          <span></span><i></i><b></b>
+        </div>
+        <p class="detail-label" id="detail-label">INVESTMENT RESEARCH</p>
+        <h2 id="detail-title">投资研究</h2>
+        <p class="detail-copy" id="detail-copy">9年投资经历</p>
+        <div class="detail-footer"><span>PERSONAL LOG</span><i></i><span>Y–DETAIL</span></div>
+      </div>
+    </dialog>
+
+    <footer class="site-footer">
+      <div><span class="brand-mark" aria-hidden="true">Y</span><strong>Yuumi</strong></div>
+      <p>保持好奇，继续探索。</p>
+      <a href="#home">BACK TO TOP ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
